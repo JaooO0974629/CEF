@@ -44,6 +44,8 @@ body {
     background-position: 12px center;
     background-repeat: no-repeat;
     background-size: 15px;
+    border: solid 2px black;
+    border-radius: 10px;
 }
 
 .inputboxs {
@@ -53,6 +55,8 @@ body {
     background-position: 9px center;
     background-repeat: no-repeat;
     background-size: 22px;
+    border: solid 2px black;
+    border-radius: 10px;
 }
 
 .logar {
@@ -67,8 +71,4 @@ body {
 
 button:active {
     background-color: blue;
-}
-
-.logout {
-    size: 20px;
 }
