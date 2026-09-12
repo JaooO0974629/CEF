@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CEF</title>
+    <link rel="stylesheet" href="css/emprestimos.css">
+</head>
+<body>
+    <header>
+        <h1>CEF</h1>
+        <nav>
+            <ul>
+                <li class="sslct"><a href="index.html">Empréstimos</a></li>
+                <li><a href="relatorios.html">Relatórios</a></li>
+                <li><a href="estoque.html">Estoque</a></li>
+                <li><a href="perfis.html">Perfis</a></li>
+            </ul>
+        </nav>
+        <a href="login.html">
+            <img class="logout" src="img/logout.png">
+        </a>
+    </header>
+    <main>
+        <div class="top_buttons">
+            <button id="novo-emp" class="nemp">Novo Empréstimo</button>
+            <input class="pesq" type="text" placeholder="Pesquisa...">
+        </div>
+        <div class="indrow">
+            <div class="indbox">
+                <h2>Indicador</h2>
+            </div>
+            <div class="indbox">
+                <h2>Indicador 2</h2>
+            </div>
+            <div class="indbox">
+                <h2>Indicador 3</h2>
+            </div>
+            <div class="indbox">
+                <h2>Indicador 4</h2>
+            </div>
+        </div>
+        <div class="tgrid">
+            <div class="tback">
+                <table class="empt">
+                    <thead>
+                        <tr class="ttitle">
+                            <th>Empréstimos Ativos</th>
+                        </tr>
+                        <tr class="firstrow">
+                            <th>Ferramenta</th>
+                            <th>Usuário</th>
+                            <th>Setor</th>
+                            <th>Data de Saída</th>
+                            <th>Previsão de Devolução</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tabemp">
+                        <tr>
+                            <td>chave de fenda</td>
+                            <td>joao</td>
+                            <td>mpp3</td>
+                            <td>hoje</td>
+                            <td>amanha</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+
+    <div id="windowback" class="windowbg">
+        <form id="newempwindow" class="window">
+        <h2>Adicionar Ferramenta</h2><br>
+
+        <div class="inpg">
+            <label for="ferramenta">Ferramenta</label><br>
+            <input type="text" name="ferramenta" required placeholder="Insira a ferramenta...">
+        </div>
+
+        <div class="inpg">
+            <label for="usuario">Usuário</label><br>
+            <input type="text" name="usuario" required placeholder="Insira o usuário...">
+        </div>
+
+        <div class="inpg">
+            <label for="setor">Setor</label><br>
+            <input type="text" name="setor" required placeholder="Insira o setor...">
+        </div>
+
+        <div class="inpg">
+            <label for="datasaida">Data de saída</label><br>
+            <input type="date" name="saida" required>
+        </div>
+
+        <div class="inpg">
+            <label for="devolução">Data de devolução</label><br>
+            <input type="date" required name="devolucao">
+        </div>
+
+        <div class="windowbuttons">
+            <button id="cancelb" type="button" class="cancel">Cancelar</button>
+            <button id="add" type="submit" class="acc">Adicionar</button>
+        </div>
+    </form>
+
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
