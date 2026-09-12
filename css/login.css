@@ -1,18 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
-
-* {
-    font-family: poppins;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 body {
     display: flex;
-    height: 100vh;
-    background-image: linear-gradient(to bottom, rgb(158, 158, 255), white);
     justify-content: center;
     align-items: center;
+    background-image: linear-gradient(to bottom, var(--color-gradient-top), white);
 }
 
 .loginbox {
@@ -21,10 +11,10 @@ body {
     align-items: center;
     text-align: center;
     background-color: white;
-    box-sizing: border-box;
     padding: 40px;
     height: 300px;
-    width: 400px;
+    width: 90%;
+    max-width: 400px;
     border-radius: 30px;
     box-shadow: 0px 3px 30px 3px rgb(135, 135, 135);
     gap: 30px;
@@ -37,26 +27,24 @@ body {
     gap: 10px;
 }
 
-.inputbox {
-    width: 300px;
-    height: 40px;
-    padding-left: 40px;
-    background-position: 12px center;
-    background-repeat: no-repeat;
-    background-size: 15px;
-    border: solid 2px black;
-    border-radius: 10px;
-}
-
+.inputbox,
 .inputboxs {
     width: 300px;
     height: 40px;
     padding-left: 40px;
-    background-position: 9px center;
     background-repeat: no-repeat;
-    background-size: 22px;
     border: solid 2px black;
     border-radius: 10px;
+}
+
+.inputbox {
+    background-position: 12px center;
+    background-size: 15px;
+}
+
+.inputboxs {
+    background-position: 9px center;
+    background-size: 22px;
 }
 
 .logar {
@@ -69,6 +57,6 @@ body {
     cursor: pointer;
 }
 
-button:active {
+.logar:active {
     background-color: blue;
 }

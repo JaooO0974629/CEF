@@ -1,24 +1,24 @@
-const windowbg = document.getElementById('windowback');
-const openbtn = document.getElementById('novo-emp');
-const cancelbtn = document.getElementById('cancelb');
-const form = document.getElementById('newempwindow');
-const tbody = document.getElementById('tabemp');
+const modalOverlay = document.getElementById('modal-overlay');
+const openBtn = document.getElementById('btn-novo-emprestimo');
+const cancelBtn = document.getElementById('btn-cancelar');
+const form = document.getElementById('form-novo-emprestimo');
+const tbody = document.getElementById('lista-emprestimos');
 
-openbtn.addEventListener("click", function() {
-    windowbg.classList.add('active');
+openBtn.addEventListener('click', function () {
+    modalOverlay.classList.add('active');
 });
 
-cancelbtn.addEventListener("click", function() {
-    windowbg.classList.remove('active');
+cancelBtn.addEventListener('click', function () {
+    modalOverlay.classList.remove('active');
 });
 
-form.addEventListener("submit", function(event) {
+form.addEventListener('submit', function (event) {
     event.preventDefault();
 
     const data = new FormData(form);
-    const newline = document.createElement('tr');
+    const newLine = document.createElement('tr');
 
-    newline.innerHTML = `
+    newLine.innerHTML = `
         <td>${data.get('ferramenta')}</td>
         <td>${data.get('usuario')}</td>
         <td>${data.get('setor')}</td>
@@ -26,7 +26,7 @@ form.addEventListener("submit", function(event) {
         <td>${data.get('devolucao')}</td>
     `;
 
-    tbody.appendChild(newline);
+    tbody.appendChild(newLine);
     form.reset();
-    windowbg.classList.remove('active');
+    modalOverlay.classList.remove('active');
 });
