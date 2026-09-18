@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CEF</title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/perfis.css">
+</head>
+<body>
+    <header>
+        <h1>CEF</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Empréstimos</a></li>
+                <li><a href="relatorios.html">Relatórios</a></li>
+                <li><a href="estoque.html">Estoque</a></li>
+                <li class="nav-ativo"><a href="perfis.html">Perfis</a></li>
+            </ul>
+        </nav>
+        <a href="login.html">
+            <img class="logout" src="img/logout.png" alt="Sair">
+        </a>
+    </header>
+
+    <div class="top_buttons">
+        <button id="btn-novo-perfil" class="botao botao--primario botao--largo">Novo Perfil</button>
+        <button id="btn-editar-perfil" class="botao botao--primario botao--largo">Editar Perfil</button>
+        <button id="btn-visualizar-perfil" class="botao botao--primario botao--largo">Visualizar Perfil</button>
+        <button id="btn-excluir-perfil" class="botao botao--primario botao--largo">Excluir Perfil</button>
+    </div>
+
+    <div id="modal-overlay-perfil" class="modal-overlay">
+        <form id="form-novo-perfil" class="modal">
+            <h2>Novo Perfil</h2>
+
+            <div class="campo-formulario">
+                <label for="nome">Nome</label>
+                <input id="nome" type="text" name="nome" required placeholder="Insira o nome...">
+            </div>
+
+            <div class="campo-formulario">
+                <label for="cpf">CPF</label>
+                <input id="cpf" type="text" name="cpf" required placeholder="Insira o CPF...">
+            </div>
+
+            <div class="campo-formulario">
+                <label for="registro">Registro</label>
+                <input id="registro" type="text" name="registro" required placeholder="Insira o registro...">
+            </div>
+
+            <div class="campo-formulario">
+                <label for="senha">Senha</label>
+                <input id="senha" type="password" name="senha" required placeholder="Insira a senha...">
+            </div>
+
+            <div class="modal-acoes">
+                <button id="btn-cancelar-perfil" type="button" class="botao botao--secundario">Cancelar</button>
+                <button id="btn-salvar-perfil" type="submit" class="botao botao--primario">Salvar</button>
+            </div>
+        </form>
+    </div>
+
+    <div id="modal-overlay-editar-perfil" class="modal-overlay">
+        <form id="form-editar-perfil" class="modal">
+            <h2>Editar Perfil</h2>
+
+            <div class="campo-formulario">
+                <label for="editar-nome">Nome</label>
+                <input id="editar-nome" type="text" name="nome" required placeholder="Insira o nome...">
+            </div>
+
+            <div class="campo-formulario">
+                <label for="editar-cpf">CPF</label>
+                <input id="editar-cpf" type="text" name="cpf" required placeholder="Insira o CPF...">
+            </div>
+
+            <div class="campo-formulario">
+                <label for="editar-registro">Registro</label>
+                <input id="editar-registro" type="text" name="registro" required placeholder="Insira o registro...">
+            </div>
+
+            <div class="campo-formulario">
+                <label for="editar-senha">Senha</label>
+                <input id="editar-senha" type="password" name="senha" required placeholder="Insira a senha...">
+            </div>
+
+            <div class="modal-acoes">
+                <button id="btn-cancelar-editar" type="button" class="botao botao--secundario">Cancelar</button>
+                <button type="submit" class="botao botao--primario">Salvar</button>
+            </div>
+        </form>
+    </div>
+
+    <div id="modal-overlay-visualizar-perfil" class="modal-overlay">
+        <div class="modal">
+            <h2>Visualizar Perfil</h2>
+
+            <div class="campo-formulario">
+                <label for="visualizar-nome">Nome</label>
+                <input id="visualizar-nome" type="text" readonly>
+            </div>
+
+            <div class="campo-formulario">
+                <label for="visualizar-cpf">CPF</label>
+                <input id="visualizar-cpf" type="text" readonly>
+            </div>
+
+            <div class="campo-formulario">
+                <label for="visualizar-registro">Registro</label>
+                <input id="visualizar-registro" type="text" readonly>
+            </div>
+
+            <div class="modal-acoes">
+                <button id="btn-fechar-visualizar" type="button" class="botao botao--primario">Fechar</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-overlay-excluir-perfil" class="modal-overlay">
+        <form id="form-excluir-perfil" class="modal">
+            <h2>Excluir Perfil</h2>
+
+            <div class="campo-formulario">
+                <label for="excluir-cpf">CPF do perfil</label>
+                <input id="excluir-cpf" type="text" name="cpf" required placeholder="Insira o CPF...">
+            </div>
+
+            <div class="modal-acoes">
+                <button id="btn-cancelar-excluir" type="button" class="botao botao--secundario">Cancelar</button>
+                <button type="submit" class="botao botao--primario">Excluir</button>
+            </div>
+        </form>
+    </div>
+
+    <script src="perfis.js"></script>
+</body>
+</html>
