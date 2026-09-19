@@ -22,5 +22,134 @@
             <img class="logout" src="img/logout.png" alt="Sair">
         </a>
     </header>
+    <main>
+
+        <section class="cabecalho-relatorios">
+
+            <div>
+                <h2>Relatórios</h2>
+                <p>Consulte o histórico de empréstimos e devoluções de ferramentas.</p>
+            </div>
+
+            <button class="botao botao--primario botao--largo">
+                Imprimir Relatório
+            </button>
+
+        </section>
+
+        <section class="indicadores">
+            <div class="indicador-card">
+                <h3>Total de Relatórios</h3>
+                <b>2</b>
+            </div>
+            <div class="indicador-card">
+                <h3>Empréstimos Ativos</h3>
+                <b>2</b>
+            </div>
+            <div class="indicador-card">
+                <h3>Devoluções</h3>
+                <b>2</b>
+            </div>
+            <div class="indicador-card">
+                <h3>Ferramentas Utilizadas</h3>
+                <b>2</b>
+            </div>
+
+        </section>
+
+        <section class="filtros">
+
+            <div class="campo-filtro">
+                <label for="pesquisa">Pesquisar</label>
+                <input
+                    id="pesquisa"
+                    class="pesquisa"
+                    type="text"
+                    placeholder="Pesquisar relatório..."
+                >
+            </div>
+
+            <div class="campo-filtro">
+                <label for="tipo">Tipo de relatório</label>
+                <select id="tipo">
+                    <option value="">Todos</option>
+                    <option value="emprestimo">Empréstimo</option>
+                    <option value="devolucao">Devolução</option>
+                </select>
+            </div>
+
+            <div class="campo-filtro">
+                <label for="data-inicio">Data inicial</label>
+
+                <input
+                    id="data-inicio"
+                    type="date"
+                >
+            </div>
+
+            <div class="campo-filtro">
+                <label for="data-fim">Data final</label>
+                <input
+                    id="data-fim"
+                    type="date"
+                >
+            </div>
+        </section>
+
+        <section class="tabela-wrapper">
+            <div class="tabela-card">
+                <table class="tabela-relatorios">
+                    <thead>
+                        <tr class="tabela-titulo">
+                            <th colspan="7">
+                                Histórico de Empréstimos
+                            </th>
+                        </tr>
+                        <tr class="tabela-cabecalho">
+                            <th>ID</th>
+                            <th>Ferramenta</th>
+                            <th>Usuário</th>
+                            <th>Setor</th>
+                            <th>Data de Saída</th>
+                            <th>Data de Devolução</th>
+                            <th>Status</th>
+                        </tr>
+
+                    </thead>
+
+                    <tbody>
+
+                        <tr>
+                            <td>001</td>
+                            <td>Chave de Fenda</td>
+                            <td>João</td>
+                            <td>MPP3</td>
+                            <td>10/09/2026</td>
+                            <td>12/09/2026</td>
+                            <td>
+                                <span class="status status--devolvido">
+                                    Devolvido
+                                </span>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>002</td>
+                            <td>Martelo</td>
+                            <td>Pedro</td>
+                            <td>Manutenção</td>
+                            <td>15/09/2026</td>
+                            <td>18/09/2026</td>
+                            <td>
+                                <span class="status status--ativo">
+                                    Em andamento
+                                </span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
 </body>
 </html>
