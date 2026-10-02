@@ -100,13 +100,50 @@
             </div>
 
             <div class="campo-formulario">
-                <label for="fornecedor">Fornecedor</label>
-                <input id="fornecedor" type="text" name="fornecedor" required placeholder="Insira o nome do Fornecedor...">
+                <label for="fornecedor">Selecione um Fornecedor</label>
+                <div class="fornecedor-controle">
+                    <select id="fornecedor" name="fornecedor" required>
+
+                    </select>
+                    <button id="btn-novo-fornecedor" class="botao-adicionar-fornecedor" type="button" aria-label="Adicionar fornecedor" title="Adicionar fornecedor">+</button>
+                </div>  
             </div>
 
             <div class="modal-acoes">
                 <button id="btn-cancelar" type="button" class="botao botao--secundario">Cancelar</button>
                 <button id="btn-adicionar" type="submit" class="botao botao--primario">Adicionar</button>
+            </div>
+        </form>
+    </div>
+
+    <div id="modal-fornecedor-overlay" class="modal-overlay">
+        <form id="form-novo-fornecedor" class="modal modal--fornecedor">
+            <h2>Novo Fornecedor</h2><br>
+
+            <div class="campo-formulario">
+                <label for="nome-fornecedor">Nome do Fornecedor</label>
+                <input id="nome-fornecedor" name="nome" type="text" required placeholder="Insira o nome do fornecedor...">
+            </div>
+
+             <div class="campo-formulario">
+                <label for="cnpj-fornecedor">CNPJ do Fornecedor</label>
+                <input id="cnpj-fornecedor" name="cnpj" inputmode="numeric" maxlength="18" minlength="14" type="text" required placeholder="00.000.000/0000-00">
+            </div>
+
+            <div class="campo-formulario">
+                <label for="telefone-fornecedor">Telefone do Fornecedor</label>
+                <input id="telefone-fornecedor" name="telefone" inputmode="tel" type="tel" autocomplete="tel" required placeholder="(00) 00000-0000">       
+            </div>
+
+            <div class="campo-formulario">
+                <label for="email-fornecedor">Email do Fornecedor</label>
+                <input id="email-fornecedor" name="email" type="email" autocomplete="email" autocapitalize="none" spellcheck="false" required placeholder="contato@empresa.com">            
+            </div>
+
+
+            <div class="modal-acoes">
+                <button id="btn-cancelar-fornecedor" type="button" class="botao botao--secundario">Cancelar</button>
+                <button type="submit" class="botao botao--primario">Adicionar</button>
             </div>
         </form>
     </div>
