@@ -24,7 +24,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 10px;
+    gap: 20px;
 }
 
 .inputbox,
@@ -35,6 +35,8 @@ body {
     background-repeat: no-repeat;
     border: solid 2px black;
     border-radius: 10px;
+    margin-bottom: 10px;
+    
 }
 
 .inputbox {
@@ -50,7 +52,7 @@ body {
 .logar {
     align-items:center;
     height: 40px;
-    width: 100px;
+    width: 150px;
     color: white;
     background-color: green;
     border: 0;
@@ -63,20 +65,4 @@ body {
     background-color: blue;
 }
 
-.recuperarLogin{
-    
-    font-size: 10px;
-
-    
-}
-.recuperarLogin:hover{
-    text-decoration: underline;
-    color:blueviolet;
-}
-.botoesBox{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 50px;
-}
 
