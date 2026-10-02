@@ -17,6 +17,8 @@ form.addEventListener('submit', function (event) {
 
     const data = new FormData(form);
     const newLine = document.createElement('tr');
+    const fornecedor = data.get('fornecedor');
+    newLine.dataset.fornecedor = fornecedor;
 
     newLine.innerHTML = `
         <td>${data.get('ferramenta')}</td>
