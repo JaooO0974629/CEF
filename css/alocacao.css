@@ -69,7 +69,9 @@
 .tabela-titulo {
     font-size: 20px;
     text-align: left;
-    height: 60px;
+    height: 70px;
+    white-space: nowrap;
+
 }
 
 .tabela-cabecalho {
